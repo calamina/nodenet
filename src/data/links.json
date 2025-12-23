@@ -1,0 +1,133 @@
+[
+  {
+    "title": "videos",
+    "content": [
+      {
+        "title": "youtube",
+        "url": "https://youtube.com",
+        "icon": "youtube",
+        "color": "#FF0033"
+      },
+      {
+        "title": "miruro",
+        "url": "https://www.miruro.tv/",
+        "icon": "miruro",
+        "color": "#85504E"
+      },
+      {
+        "title": "sflix",
+        "url": "https://sflix.to/",
+        "icon": "sflix",
+        "color": "#2BBAAD"
+      },
+      {
+        "title": "arte",
+        "url": "https://arte.tv/fr",
+        "icon": "arte",
+        "color": "#FA481C"
+      },
+      {
+        "title": "francetv",
+        "url": "https://www.france.tv/",
+        "icon": "francetv",
+        "color": "#a57332"
+      }
+    ]
+  },
+  {
+    "title": "download",
+    "content": [
+      {
+        "title": "nyaa",
+        "description": "anime",
+        "url": "https://nyaa.si/",
+        "icon": "nyaa",
+        "color": "#038BFF"
+      },
+      {
+        "title": "yts",
+        "description": "movies",
+        "url": "https://yts.proxyninja.net/",
+        "icon": "yts",
+        "color": "#588C31"
+      },
+      {
+        "title": "magnet",
+        "url": "https://magnetdl.homes/",
+        "icon": "magnet",
+        "color": "#CDBDB8"
+      },
+      {
+        "title": "subdl",
+        "url": "https://subdl.com/subtitle/sd5100/song-of-the-sea",
+        "icon": "subdl",
+        "color": "#FDEC29"
+      }
+    ]
+  },
+  {
+    "title": "catalogs",
+    "content": [
+      {
+        "title": "wikipedia",
+        "url": "https://www.wikipedia.org/",
+        "icon": "wikipedia",
+        "color": "#101418"
+      },
+      {
+        "title": "senscritique",
+        "url": "https://www.senscritique.com/",
+        "icon": "senscritique",
+        "color": "#2fc46f"
+      },
+      {
+        "title": "anilist",
+        "url": "https://anilist.co/home",
+        "icon": "anilist",
+        "color": "#3db4f2"
+      }
+    ]
+  },
+  {
+    "title": "dev",
+    "content": [
+      {
+        "title": "github",
+        "url": "https://github.com/",
+        "icon": "github"
+      },
+      {
+        "title": "dokploy",
+        "url": "http://72.60.190.120:3000/dashboard/projects",
+        "icon": "dokploy"
+      },
+      {
+        "title": "hostinger",
+        "url": "https://hpanel.hostinger.com/",
+        "icon": "hostinger"
+      },
+      {
+        "title": "astro",
+        "url": "http://localhost:4321",
+        "description": "astro",
+        "icon": "astro"
+      },
+      {
+        "title": "vite",
+        "url": "http://localhost:5173",
+        "description": "vue/vite",
+        "icon": "vite"
+      }
+    ]
+  },
+  {
+    "title": "admin",
+    "content": [
+      {
+        "title": "gmail",
+        "url": "https://gmail.com/",
+        "icon": "gmail"
+      }
+    ]
+  }
+]

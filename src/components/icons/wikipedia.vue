@@ -1,0 +1,9 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+    viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M3 4.984h2m3 0h2.5m4 0H17m5 0h-2m-16 0L9.455 19.5L16 4.984" />
+      <path d="M9 4.984L15 19.5l6-14.516" />
+    </g>
+  </svg>
+</template>

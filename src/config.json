@@ -1,0 +1,7 @@
+{
+  "rss": true,
+  "weather": true,
+  "mail": true,
+  "notes": true,
+  "youtube": true
+}
