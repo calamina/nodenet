@@ -1,9 +1,11 @@
+@import url("./fonts.css");
 @import url("./reset.css");
-@import url("./assets/ibm-plex-sans/css/ibm-plex-sans-all.css");
+@import url("./theme.css");
 
 * {
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Mono";
   font-size: 18px;
+  /* color: var(--color-primary); */
 }
 
 body {
@@ -13,4 +15,5 @@ body {
   display: grid;
   place-items: center;
   background-color: antiquewhite;
+  background-color: var(--bg);
 }

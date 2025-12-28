@@ -3,13 +3,14 @@ import type { Username } from "../model/username";
 
 export const getfeed = async (username: Username) => {
   const proxy = "https://corsproxy.io/?url=";
+  const url = "https://www.youtube.com/feeds/videos.xml?channel_id="
   const channels = feeds[username];
-  const results = [];
+  const results: any = [];
 
   for (const channel of channels) {
     const parser = new (window as any).RSSParser();
     try {
-      const feed = await parser.parseURL(proxy + channel.url);
+      const feed = await parser.parseURL(proxy + url + channel.id);
       feed.items.forEach((item: any) => {
         item.pubDate = new Date(item.pubDate)
         item.id = item.id.replace("yt:video:", "")
@@ -21,7 +22,7 @@ export const getfeed = async (username: Username) => {
   }
 
   const orderedResults = results
-    ?.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime())
+    ?.sort((a: any, b: any) => b.pubDate.getTime() - a.pubDate.getTime())
     ?.slice(0, 10)
 
   return orderedResults

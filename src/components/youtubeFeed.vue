@@ -22,10 +22,15 @@ const update = async (username: Username) => selected.value = username;
   <div class="feed">
     <div class="header">
       <HeaderBase>youtube</HeaderBase>
-      <button :class="{ 'button-tab-active': selected === 'gregoire' }" class="button-tab"
-        @click="update('gregoire')">greggu</button>
-      <button :class="{ 'button-tab-active': selected === 'justine' }" class="button-tab"
-        @click="update('justine')">tomatine</button>
+      <div class="tabs">
+        <button :class="{ 'button-tab-active': selected === 'gregoire' }" class="button-tab"
+                @click="update('gregoire')">
+          greggu
+        </button>
+        <button :class="{ 'button-tab-active': selected === 'justine' }" class="button-tab" @click="update('justine')">
+          tomatine
+        </button>
+      </div>
     </div>
     <div v-if="evaluating" class="loading">
       Loading <span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
@@ -48,15 +53,22 @@ const update = async (username: Username) => selected.value = username;
   display: flex;
   flex-flow: column;
   height: 100%;
-  width: 18rem;
-  overflow: scroll;
-  /* padding: 1rem; */
-  /* background-color: #24242411; */
-  background-color: #e9d8c7;
+  flex: 1;
+  gap: 0.25rem;
+  width: 100%;
+  overflow-y: scroll;
+  /* background-color: #e9d8c7; */
+  background-color: var(--bg-alt);
+  scrollbar-width: thin;
+  /* scrollbar-color: #92877b transparent; */
+  scrollbar-color: var(--color-secondary-dim) transparent;
 }
 
 .results {
-  padding: 0 1rem 0.5rem;
+  display: flex;
+  flex-flow: column;
+  padding: 0 2rem 1.5rem;
+  gap: 0.75rem;
 }
 
 .entry {
@@ -65,14 +77,15 @@ const update = async (username: Username) => selected.value = username;
 }
 
 a {
-  color: #242424;
+  /* color: #242424; */
   font-weight: 500;
   text-decoration: none;
   line-height: 20px;
-  font-size: 16px;
+  /* font-size: 16px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--color-primary);
 }
 
 img {
@@ -82,19 +95,23 @@ img {
 
 .header {
   z-index: 2;
-  padding: 0.5rem 1rem;
-  background-color: #e9d8c7;
+  padding: 0.75rem 2rem;
+  /* background-color: #e9d8c7; */
+  background-color: var(--bg-alt);
   display: flex;
+  flex-flow: column;
   position: sticky;
   top: 0;
   align-items: baseline;
-  gap: .25rem;
-  padding-bottom: .5rem;
+  gap: 0;
+  /* gap: 1rem; */
+  padding-bottom: .75rem;
 }
 
 .button-tab {
   font-variant: small-caps;
   font-size: 20px;
+  font-size: 1.3rem;
   line-height: 18px;
   font-weight: 500;
   opacity: 0.4;
@@ -103,9 +120,9 @@ img {
   outline: none;
   cursor: pointer;
 
-  &:first-of-type {
+  /* &:first-of-type {
     margin-left: auto;
-  }
+  } */
 
   &.button-tab-active {
     text-decoration: underline;
@@ -114,20 +131,23 @@ img {
 }
 
 .info {
-  opacity: 0.4;
   font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--color-secondary-dim);
 }
 
 .loading {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 16px;
-  background-color: #2424241c;
-  padding: .15rem .5rem;
+  background-color: var(--bg);
+  padding: 1rem;
+  margin: 0.5rem .5rem 0.5rem 1rem;
   border-radius: 4px;
 }
 

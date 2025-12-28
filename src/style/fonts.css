@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Amstir";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/amstir-pixel-demo.regular.otf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/IBMPlexMono-Regular.ttf");
+}
