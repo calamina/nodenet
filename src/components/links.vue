@@ -22,16 +22,13 @@ const { links } = useData();
 
 <style scoped>
 .categories {
-  /* display: flex; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   padding: 0 4rem 4rem;
   gap: 4rem;
   grid-area: main;
   max-height: 100%;
-  /* place-items: center; */
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: var(--color-secondary-dim) transparent;
@@ -54,14 +51,20 @@ a {
   align-items: center;
   gap: .5rem;
   color: var(--color-secondary);
-  /* font-weight: 500; */
   text-decoration: none;
   text-transform: capitalize;
-  /* font-size: 1.2rem; */
   font-family: "IBM Plex Mono";
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1600px) {
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 2rem 2rem;
+    gap: 2rem 1rem;
   }
 }
 </style>

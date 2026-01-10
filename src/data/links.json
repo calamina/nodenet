@@ -15,6 +15,12 @@
         "color": "#85504E"
       },
       {
+        "title": "netflix",
+        "url": "https://www.netflix.com/",
+        "icon": "netflix",
+        "color": "#85504E"
+      },
+      {
         "title": "sflix",
         "url": "https://sflix.to/",
         "icon": "sflix",
@@ -85,6 +91,12 @@
         "url": "https://anilist.co/home",
         "icon": "anilist",
         "color": "#3db4f2"
+      },
+      {
+        "title": "FMHY",
+        "url": "https://fmhy.net/",
+        "icon": "fmhy",
+        "color": "#3db4f2"
       }
     ]
   },
@@ -127,6 +139,11 @@
         "title": "gmail",
         "url": "https://gmail.com/",
         "icon": "gmail"
+      },
+      {
+        "title": "mutuelle",
+        "url": "https://assure.vivinter.fr/connexion.html",
+        "icon": "mutuelle"
       }
     ]
   },

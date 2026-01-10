@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import links from "./components/links.vue";
 import notes from "./components/notes.vue";
 import youtubeFeed from "./components/youtubeFeed.vue";
-import links from "./components/links.vue";
 </script>
 
 <template>

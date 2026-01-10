@@ -24,7 +24,7 @@ const update = async (username: Username) => selected.value = username;
       <HeaderBase>youtube</HeaderBase>
       <div class="tabs">
         <button :class="{ 'button-tab-active': selected === 'gregoire' }" class="button-tab"
-                @click="update('gregoire')">
+          @click="update('gregoire')">
           greggu
         </button>
         <button :class="{ 'button-tab-active': selected === 'justine' }" class="button-tab" @click="update('justine')">
@@ -37,11 +37,11 @@ const update = async (username: Username) => selected.value = username;
     </div>
     <div class="results" v-else>
       <div class="entry" v-for="result in results">
-        <a :href="result.link">
+        <a :href="'https://www.youtube.com/watch?v=' + result.id">
           <img width="100" :src="`http://img.youtube.com/vi/${result.id}/sddefault.jpg`" alt="">
           {{ result.title }}
         </a>
-        <p class="info">{{ useDateFormat(result.isoDate) }} — {{ result.author }}</p>
+        <p class="info">{{ useDateFormat(result.published) }} — {{ result.author.name }}</p>
         <p></p>
       </div>
     </div>

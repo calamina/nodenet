@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { v4 as uuidv4 } from 'uuid';
 import { ref, watch, type Ref } from 'vue';
+import type { Note } from '../model/note';
 import HeaderBase from './HeaderBase.vue';
 import icon from './icon.vue';
-import { v4 as uuidv4 } from 'uuid';
-import type { Note } from '../model/note';
 
 const storedNotes = localStorage.getItem('notes')
 const newnote = ref(null)
@@ -41,16 +41,18 @@ const updateStorage = () => {
   <div class="container">
     <div class="list">
       <HeaderBase class="header">notes</HeaderBase>
-      <div v-for="note in notes" class="notes">
-        <button class="check" @click="toggleStatus(note)">
-          <icon v-if="note.status === 'todo'" name="check-not" size="1.5" :nobg="true" />
-          <icon v-else name="check" size="1.5" :nobg="true" />
-        </button>
-        <p class="text" :style="{ opacity: note.status === 'done' ? 0.4 : 1 }">{{ note.text }}</p>
-        <button @click="deleteNote(note.id)">
-          <icon name="close" size="1.3" :nobg="true" />
-        </button>
-      </div>
+      <template v-if="notes.length">
+        <div v-for="note in notes" class="notes">
+          <button class="check" @click="toggleStatus(note)">
+            <icon v-if="note.status === 'todo'" name="check-not" size="1.5" :nobg="true" />
+            <icon v-else name="check" size="1.5" :nobg="true" />
+          </button>
+          <p class="text" :style="{ opacity: note.status === 'done' ? 0.4 : 1 }">{{ note.text }}</p>
+          <button @click="deleteNote(note.id)">
+            <icon name="close" size="1.3" :nobg="true" />
+          </button>
+        </div>
+      </template>
     </div>
     <form @submit.prevent="addNote">
       <input type="text" name="note" id="note" placeholder="Add note [enter]" v-model="newnote" autocomplete="off">
