@@ -11,7 +11,6 @@
   --color-discrete-dim: rgba(100, 100, 100, 0.5);
 }
 
-
 :root {
   --bg: rgb(220, 220, 220);
   --bg-alt: rgb(210, 210, 210);
@@ -24,12 +23,12 @@
 }
 
 :root {
-  --bg: rgb(220, 220, 220);
-  --bg-alt: rgb(210, 210, 210);
-  --bg-alter: rgb(200, 200, 200);
-  --color-primary: rgb(24, 24, 24);
-  --color-secondary: rgb(24, 24, 24);
-  --color-secondary-dim: rgba(24, 24, 24, 0.5);
-  --color-discrete: rgb(100, 100, 100);
-  --color-discrete-dim: rgba(100, 100, 100, 0.5);
+  --bg: rgb(220, 220, 200);
+  --bg-alt: rgb(210, 210, 190);
+  --bg-alter: rgb(200, 200, 180);
+  --color-primary: rgb(24, 24, 14);
+  --color-secondary: rgb(24, 24, 14);
+  --color-secondary-dim: rgba(24, 24, 14, 0.5);
+  --color-discrete: rgb(100, 100, 80);
+  --color-discrete-dim: rgba(100, 100, 80, 0.5);
 }

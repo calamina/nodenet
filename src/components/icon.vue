@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const { name, color, size, nobg } = defineProps<{ name: string, color?: string | undefined, size?: string, nobg?: boolean }>()
+const { name, size, nobg } = defineProps<{ name: string, color?: string | undefined, size?: string, nobg?: boolean }>()
 
 const AsyncComponent = defineAsyncComponent(async () => import(`./icons/${name}.vue`))
 
