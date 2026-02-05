@@ -17,11 +17,12 @@ export const getfeed = async (username: Username) => {
       const chan = parser.parse(result);
       const entries = chan?.feed?.entry
 
-      entries.forEach((item: any) => {
-        item.published = new Date(item.published)
-        item.id = item.id.replace("yt:video:", "")
-      })
+      if (!entries) return
 
+      for (const entry of entries) {
+        entry.published = new Date(entry.published)
+        entry.id = entry.id.replace("yt:video:", "")
+      }
       results.push(...chan?.feed?.entry)
     }
     catch (error) { console.debug("error", error) }
