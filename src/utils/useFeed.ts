@@ -3,8 +3,8 @@ import feeds from "../data/youtube.json";
 import type { Username } from "../model/username";
 
 export const getfeed = async (username: Username) => {
-  const proxy = "https://corsproxy.io/?url=";
-  const url = "https://www.youtube.com/feeds/videos.xml?channel_id="
+  const proxy = import.meta.env.DEV ? "https://corsproxy.io/?url=" : ""
+  const url = "http://www.youtube.com/feeds/videos.xml?channel_id="
   const channels = feeds[username];
   const results: any = [];
 
